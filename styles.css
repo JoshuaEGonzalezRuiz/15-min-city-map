@@ -1,0 +1,199 @@
+.divMap {
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
+.divGeneral {
+  width: 400px;
+  height: 35%;
+  background-color: rgba(255, 255, 255, 1);
+  position: relative;
+  border: 5px black;
+  margin: 10px;
+  padding: 10px;
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
+  border-radius: 12px;
+}
+
+.divButtons {
+  width: 400px;
+  height: 370px;
+  background-color: rgba(255, 255, 255, 1);
+  position: relative;
+  border: 5px black;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
+  border-radius: 12px;
+}
+
+#divDescription {
+  display: flex;
+}
+
+.icon {
+  padding: 5px;
+  min-width: 20px;
+}
+
+#ipt_geocoding {
+  width: 60%;
+  padding: 10px;
+  text-align: center;
+  flex: 1;
+  border-radius: 25px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+#divCoordinates {
+  margin: 10px;
+}
+
+.iptCoordinates {
+  width: 40%;
+  padding: 5px;
+  text-align: center;
+  flex: 1;
+  border-radius: 25px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#search {
+  background-color: rgba(153, 170, 181, 0.6);
+  /* Blue background */
+  border-radius: 12px;
+  width: 15%;
+}
+
+#list_options {
+  width: 35%;
+}
+
+#divOptions {
+  margin: 10px;
+}
+
+.btnOption {
+  border: 1.5px solid black;
+  border-radius: 25px;
+  background-color: rgb(253, 253, 253);
+  margin-top: 5px;
+  margin-bottom: 0px;
+  margin-left: 15px;
+  margin-right: 15px;
+  padding: 2px;
+  text-align: center;
+  width: 85px;
+  height: 40px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.btnOptionClick {
+  border: 1.5px solid black;
+  border-radius: 25px;
+  background-color: rgb(162, 80, 229, 0.35);
+  margin-top: 5px;
+  margin-bottom: 0px;
+  margin-left: 15px;
+  margin-right: 15px;
+  padding: 2px;
+  text-align: center;
+  width: 85px;
+  height: 40px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.btnCategories {
+  border: 1.5px solid black;
+  border-radius: 12px;
+  margin: 2px;
+  padding: 2px;
+  text-align: center;
+  width: 140px;
+  height: 40px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.divOne {
+  margin-left: 50px;
+  float: left;
+  width: 50px;
+}
+
+.divTwo {
+  margin-right: 100px;
+  float: right;
+  width: 50px;
+}
+
+.divCategory {
+  width: 100px;
+  border-radius: 25px;
+  margin-bottom: 10px;
+  background-color: rgb(255, 255, 255);
+}
+
+.imgCategory {
+  margin-top: 25px;
+  margin-bottom: 15px;
+  margin-left: 40%;
+  margin-right: 55%;
+}
+
+.txtCategory {
+  position: relative;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  left: 1%;
+  font-weight: bold;
+  right: 5%;
+}
+
+.countCategory {
+  position: relative;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  left: 1%;
+  right: 5%;
+}
+
+
+#divGrocery {
+  border: 2px solid rgba(255,186,109, 1);
+}
+
+#divMedical {
+  border: 2px solid rgba(254,0,136, 1);
+}
+
+#divCulture {
+  border: 2px solid rgba(161,0,254, 1);
+}
+
+#divEducation {
+  border: 2px solid rgba(0,210,254, 1);
+}
+
+#divTransit {
+  border: 2px solid rgba(75,48,254, 1);
+}
+
+#divLeisure {
+  border: 2px solid rgba(17,196,60, 1);
+}

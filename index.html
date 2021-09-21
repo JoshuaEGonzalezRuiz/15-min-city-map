@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--HERE Services-->
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-core.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-service.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-ui.js" type="text/javascript" charset="utf-8"></script>
+
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.1/mapsjs-ui.css">
+
+    <!--HERE Services-->
+
+    <script src="./js/constants.js" type="text/javascript"></script>
+
+    <!--HERE FUNCTIONS FOR DECODE A POLYGON-->
+
+    <script src="./js/decodePolygon.js" type="text/javascript"></script>
+
+    <!--HERE FUNCTIONS FOR DECODE A POLYGON-->
+
+    <!--POINT IN POLYGON-->
+
+    <script src="./js/point_in_polygon/flat.js" type="text/javascript"></script>
+    <script src="./js/point_in_polygon/nested.js" type="text/javascript"></script>
+    <script src="./js/point_in_polygon/pointInPolygon.js" type="text/javascript"></script>
+
+    <!--POINT IN POLYGON-->
+
+    <!--FONTAWESOME-->
+
+    <script src="https://kit.fontawesome.com/cc50fb80d9.js" crossorigin="anonymous"></script>
+
+    <!--FONTAWESOME-->
+
+
+    <title>15-min-city-map</title>
+</head>
+
+<body>
+
+    <div id="divMap" class="divMap">
+
+    </div>
+
+    <div class="divGeneral">
+        <div id="divDescription">
+            <input id="ipt_geocoding" list="list_suggestions" onkeyup="searchGeocoding()"
+                placeholder="Enter an address or zip code">
+
+            <!--<button type="submit" id="search" onclick="setGeocoding()">  </button>-->
+        </div>
+
+        <div>
+            <datalist id="list_suggestions">
+            </datalist>
+        </div>
+        <div id="divCoordinates">
+            <label style="font-weight: bold;">Enter a coordinates o move the person marker in the map</label>
+            <input id="ipt_lat" class="iptCoordinates" placeholder="Enter latitude">
+            <input id="ipt_lng" class="iptCoordinates" placeholder="Enter longitude">
+            <button type="submit" id="search" onclick="reverseGeocoding(document.getElementById('ipt_lat').value, document.getElementById('ipt_lng').value)"> <i class="fas fa-search"></i>
+            </button>
+        </div>
+
+        <div id="divOptions">
+            <button id="btnPedestrianOne" class="btnOptionClick" onclick="getIsoline15minPedestrian()">
+                <img src="./icons/walk.svg" style="margin-right: 2%;">
+                15 min</button>
+            <button id="btnPedestrianTwo" class="btnOption" onclick="getIsoline20minPedestrian()">
+                <img src="./icons/walk.svg" style="margin-right: 2%;">
+                20 min</button>
+            <button id="btnCar" class="btnOption" onclick="getIsoline20minCar()">
+                <img src="./icons/car.svg" style="margin-right: 2%;">
+                20 min</button>
+        </div>
+    </div>
+
+    <div class="divButtons">
+        <div class="divOne">
+            <div id="divGrocery" class="divCategory">
+                <img src="./icons/grocery.svg" class="imgCategory">
+            <label style="color: rgba(255,186,109, 1)" class="txtCategory">Groceries</label>
+            <label id="grocery" class="countCategory">0</label>
+            </div>
+            <div id="divMedical" class="divCategory">
+                <img src="./icons/hospital.svg" class="imgCategory">
+            <label style="color: rgba(254,0,136, 1)" class="txtCategory">Medical</label>
+            <label id="hospitals" class="countCategory">0</label>
+            </div>
+            <div id="divCulture" class="divCategory">
+                <img src="./icons/cinema.svg" class="imgCategory">
+            <label style="color: rgba(161,0,254, 1)" class="txtCategory">Culture</label>
+            <label id="cinemas_theaters" class="countCategory">0</label>
+            </div>
+        </div>
+        <div class="divTwo">
+            <div id="divEducation" class="divCategory">
+                <img src="./icons/school.svg" class="imgCategory">
+                <label style="color: rgba(0,210,254, 1)" class="txtCategory">Education</label>
+            <label id="schools" class="countCategory">0</label>
+            </div>
+            <div id="divTransit" class="divCategory">
+                <img src="./icons/public_transport.svg" class="imgCategory">
+                <label style="color: rgba(75,48,254, 1)" class="txtCategory">Transit</label>
+            <label id="public_transport" class="countCategory">0</label>
+            </div>
+            <div id="divLeisure" class="divCategory">
+                <img src="./icons/outdoor.svg" class="imgCategory">
+                <label style=" color: rgba(17,196,60, 1)" class="txtCategory">Leisure</label>
+            <label id="outdoor_recreation" class="countCategory">0</label>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/services.js" type="text/javascript"></script>
+
+</body>
+
+</html>
