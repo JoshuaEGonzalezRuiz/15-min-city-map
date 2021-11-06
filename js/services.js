@@ -25,7 +25,7 @@ var behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
 
 var ui = H.ui.UI.createDefault(map, defaultLayers);
 
-var icon = new H.map.Icon(constants.defaultMarkup);
+var icon = new H.map.Icon("../icons/location.svg");
 
 var defaultMarker = new H.map.Marker(
   { lat: latitude, lng: longitude },
@@ -384,40 +384,40 @@ function getCategories(bbox, coordinates, option) {
   switch (option) {
     case "grocery":
       category = "600-6300-0066";
-      svgMarkup = constants.grocerieMarkup;
+      svgMarkup = "../icons/grocery.svg";
       categoryTitle = "GROCERIES";
       styleCategory = `margin-right: 25%; font-weight: 600; font-size: 12px; width: 30%; color: rgba(255,186,109, 1);`;
       break;
     case "hospitals":
       category =
         "800-8000-0159,800-8000-0325,600-6400-0000,800-8000-0155,600-6400-0070";
-      svgMarkup = constants.hospitalMarkup;
+      svgMarkup = "../icons/hospital.svg";
       categoryTitle = "MEDICAL";
       styleCategory = `margin-right: 25%; font-weight: 600; font-size: 12px; width: 30%; color: rgba(254,0,136, 1)`;
       break;
     case "cinemas_theaters":
       category = "200-2100-0019,200-2200-0000,200-2200-0020";
-      svgMarkup = constants.cinemaMarkup;
+      svgMarkup = "../icons/cinema.svg";
       categoryTitle = "ENTERTAINMENT";
       styleCategory = `margin-right: 25%; font-weight: 600; font-size: 12px; width: 30%; color: rgba(161,0,254, 1)`;
       break;
     case "schools":
       category = "700-7400-0286,800-8200-0174";
-      svgMarkup = constants.schoolMarkup;
+      svgMarkup = "../icons/school.svg";
       categoryTitle = "EDUCATION";
       styleCategory = `margin-right: 25%;; font-weight: 600; font-size: 12px; width: 30%; color: rgba(0,210,254, 1)`;
       break;
     case "public_transport":
       category =
         "400-4100-0035,400-4100-0036,400-4100-0037,400-4100-0038,400-4100-0039,400-4100-0040,400-4100-0042,400-4100-0043,400-4100-0044,400-4100-0337,400-4100-0338,400-4100-0046,400-4100-0045,400-4100-0339,400-4100-0340,400-4100-0341,400-4100-0342";
-      svgMarkup = constants.publicTransportMarkup;
+      svgMarkup = "../icons/publicTransport.svg";
       categoryTitle = "TRANSIT";
       styleCategory = `margin-right: 25%; font-weight: 600; font-size: 12px; width: 30%; color: rgba(75,48,254, 1)`;
       break;
     case "outdoor_recreation":
       category =
         "550-5510-0000,550-5510-0202,550-5510-0203,550-5510-0204,550-5510-0205,550-5510-0227,550-5510-0242,550-5510-0359,550-5510-0378,550-5510-0379,550-5510-0380,550-5520-0207,550-5520-0208,550-5520-0209,550-5520-0210,550-5520-0211,550-5520-0212,550-5520-0228,550-5520-0357";
-      svgMarkup = constants.outdoorRecreationMarkup;
+      svgMarkup = "../icons/outdoor.svg";
       categoryTitle = "LEISURE";
       styleCategory = `margin-right: 25%; font-weight: 600; font-size: 12px; width: 30%; color: rgba(17,196,60, 1);`;
       break;

@@ -15,6 +15,10 @@
 
     <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.1/mapsjs-ui.css">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap" rel="stylesheet">
+
     <!--HERE Services-->
 
     <script src="./js/constants.js" type="text/javascript"></script>
@@ -33,12 +37,6 @@
 
     <!--POINT IN POLYGON-->
 
-    <!--FONTAWESOME-->
-
-    <script src="https://kit.fontawesome.com/cc50fb80d9.js" crossorigin="anonymous"></script>
-
-    <!--FONTAWESOME-->
-
 
     <title>15-min-city-map</title>
 </head>
@@ -53,7 +51,6 @@
         <div id="divDescription">
             <input id="ipt_geocoding" list="list_suggestions" onkeyup="searchGeocoding()"
                 placeholder="Enter an address or zip code">
-
             <!--<button type="submit" id="search" onclick="setGeocoding()">  </button>-->
         </div>
 
@@ -62,11 +59,15 @@
             </datalist>
         </div>
         <div id="divCoordinates">
-            <label style="font-weight: bold;">Enter a coordinates o move the person marker in the map</label>
-            <input id="ipt_lat" class="iptCoordinates" placeholder="Enter latitude">
-            <input id="ipt_lng" class="iptCoordinates" placeholder="Enter longitude">
-            <button type="submit" id="search" onclick="reverseGeocoding(document.getElementById('ipt_lat').value, document.getElementById('ipt_lng').value)"> <i class="fas fa-search"></i>
-            </button>
+            <p class="title" style="">Enter a coordinates o move the person marker in the
+                map</p>
+            <div id="divInptCoordinates">
+                <input id="ipt_lat" class="iptCoordinates" placeholder="Enter latitude">
+                <input id="ipt_lng" class="iptCoordinates" placeholder="Enter longitude">
+                <button type="submit" id="search"
+                    onclick="reverseGeocoding(document.getElementById('ipt_lat').value, document.getElementById('ipt_lng').value)">
+                </button>
+            </div>
         </div>
 
         <div id="divOptions">
@@ -86,35 +87,35 @@
         <div class="divOne">
             <div id="divGrocery" class="divCategory">
                 <img src="./icons/grocery.svg" class="imgCategory">
-            <label style="color: rgba(255,186,109, 1)" class="txtCategory">Groceries</label>
-            <label id="grocery" class="countCategory">0</label>
+                <p style="color: rgba(255,186,109, 1)" class="txtCategory">Groceries</p>
+                <p id="grocery" class="countCategory">0</p>
             </div>
             <div id="divMedical" class="divCategory">
                 <img src="./icons/hospital.svg" class="imgCategory">
-            <label style="color: rgba(254,0,136, 1)" class="txtCategory">Medical</label>
-            <label id="hospitals" class="countCategory">0</label>
+                <p style="color: rgba(254,0,136, 1)" class="txtCategory">Medical</p>
+                <p id="hospitals" class="countCategory">0</p>
             </div>
             <div id="divCulture" class="divCategory">
                 <img src="./icons/cinema.svg" class="imgCategory">
-            <label style="color: rgba(161,0,254, 1)" class="txtCategory">Culture</label>
-            <label id="cinemas_theaters" class="countCategory">0</label>
+                <p style="color: rgba(161,0,254, 1)" class="txtCategory">Culture</p>
+                <p id="cinemas_theaters" class="countCategory">0</p>
             </div>
         </div>
         <div class="divTwo">
             <div id="divEducation" class="divCategory">
                 <img src="./icons/school.svg" class="imgCategory">
-                <label style="color: rgba(0,210,254, 1)" class="txtCategory">Education</label>
-            <label id="schools" class="countCategory">0</label>
+                <p style="color: rgba(0,210,254, 1)" class="txtCategory">Education</p>
+                <p id="schools" class="countCategory">0</p>
             </div>
             <div id="divTransit" class="divCategory">
-                <img src="./icons/public_transport.svg" class="imgCategory">
-                <label style="color: rgba(75,48,254, 1)" class="txtCategory">Transit</label>
-            <label id="public_transport" class="countCategory">0</label>
+                <img src="./icons/publicTransport.svg" class="imgCategory">
+                <p style="color: rgba(75,48,254, 1)" class="txtCategory">Transit</p>
+                <p id="public_transport" class="countCategory">0</p>
             </div>
             <div id="divLeisure" class="divCategory">
                 <img src="./icons/outdoor.svg" class="imgCategory">
-                <label style=" color: rgba(17,196,60, 1)" class="txtCategory">Leisure</label>
-            <label id="outdoor_recreation" class="countCategory">0</label>
+                <p style=" color: rgba(17,196,60, 1)" class="txtCategory">Leisure</p>
+                <p id="outdoor_recreation" class="countCategory">0</p>
             </div>
         </div>
     </div>
